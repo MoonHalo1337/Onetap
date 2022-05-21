@@ -73,8 +73,6 @@ if (Math.max(nextShot,nextShotSecondary) - Globals.Curtime() > 0.00) {
 } 
 
 
-    if (Entity.IsAlive(Entity.GetLocalPlayer())) {
-
         if (UI.GetValue(["Rage", "Exploits", "Keys", "Key assignment", "Double tap"]) == 1 && UI.GetValue(["Rage", "Exploits", "General", "Double tap"]) == 1) {
 var ui = UI.GetValue(["Config", "Cheat", "General", "GUI scaling"]);
 
@@ -101,7 +99,7 @@ g_size = 16
 
         Render.String(21, screen_size[1] - 348, 0, "DT", [0, 0, 0, 100], Render.GetFont("a.ttf", 22 * ui, false));
         Render.String(20, screen_size[1] - 349, 0, "DT", [dt_col1, dt_col2, dt_col3, dt_col4], Render.GetFont("a.ttf", 22 * ui, false));
-             }
+
         }
     }
 }
