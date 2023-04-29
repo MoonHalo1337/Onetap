@@ -1,16 +1,16 @@
 var print = function(a)
 {
-    Cheat.PrintLog(""+a, [255, 255, 255, 200])
+    Cheat.PrintLog(""+a, [255, 255, 255, 200]);
 }
 
 var get_color = function()
 {
-    return (UI.GetColor(["Visuals", "Chams", "Self", "Visible material color"]))
+    return (UI.GetColor(["Visuals", "Chams", "Self", "Visible material color"]));
 }
 
 var set_color = function(v)
 {
-    return (UI.SetColor(["Visuals", "Chams", "Self", "Visible material color"], v))
+    return (UI.SetColor(["Visuals", "Chams", "Self", "Visible material color"], v));
 }
 
 var get_scoped = function(ent)
@@ -18,7 +18,7 @@ var get_scoped = function(ent)
     return Entity.GetProp(ent, "CCSPlayer", "m_bIsScoped");
 }
 
-var g_default_value = 255/4
+var g_default_value = 255/4;
 var g_default_speed = 3;
 var g_color = get_color();
 var g_alpha = get_color()[3];
@@ -32,11 +32,11 @@ var on_color_change = function()
     g_old_alpha = get_color()[3];
 }
 
-UI.RegisterCallback(["Visuals", "Chams", "Self", "Visible material color"], "on_color_change")
+UI.RegisterCallback(["Visuals", "Chams", "Self", "Visible material color"], "on_color_change");
 
 var get_c_id = function(ent)
 {
-    return Entity.GetClassName(Entity.GetWeapon(ent))
+    return Entity.GetClassName(Entity.GetWeapon(ent));
 }
 
 var check_nade = function(index)
