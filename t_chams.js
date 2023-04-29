@@ -72,7 +72,7 @@ var check_nade = function(index)
 
 var paint = function()
 {
-    if (!Entity.GetLocalPlayer() || Entity.IsAlive(Entity.GetLocalPlayer())){
+    if (!Entity.GetLocalPlayer() || !Entity.IsAlive(Entity.GetLocalPlayer())){
         return;
     }
 
